@@ -115,7 +115,7 @@ Build the Docker image and run the container:
 
 ```bash
 docker build -t laptop-price-api .
-docker run --rm --name laptop-price-api -p 5000:5000 laptop-price-api
+docker run -it --rm -p 5000:5000 laptop-price-api
 ```
 
 Once the container is running, the API should be available at `http://localhost:5000/predict`.
@@ -141,7 +141,7 @@ The port mapping makes the API available from the local machine. It does not aut
 1. **Running the notebook:** I recommend running `Midterm.ipynb` in Google Colab to avoid many local environment and compatibility issues.
 2. **Unexpected or random-looking results:** If the notebook produces unexpected results, try restarting the runtime and running all cells again from the beginning. This can happen when cells are executed out of order or when previous variables remain in memory. It does not necessarily mean that the model is making incorrect predictions.
 3. **Price scale and currency:** The prices come from the dataset's local currency and can reach the millions. Therefore, a prediction may also be a large number. This can reflect the scale and distribution of the original data rather than an error in the prediction. The project does not perform currency conversion.
-
+4. **Important Note:** After downloading and extracting the ZIP file, you may find the project folder nested inside another folder with the same name. Open the inner folder containing the Dockerfile and all project files before running the Docker build command.
 
 ## Technologies Used
 
