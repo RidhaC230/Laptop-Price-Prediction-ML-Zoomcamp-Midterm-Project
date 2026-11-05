@@ -141,7 +141,7 @@ The port mapping makes the API available from the local machine. It does not aut
 1. **Running the notebook:** I recommend running `Midterm.ipynb` in Google Colab to avoid many local environment and compatibility issues.
 2. **Unexpected or random-looking results:** If the notebook produces unexpected results, try restarting the runtime and running all cells again from the beginning. This can happen when cells are executed out of order or when previous variables remain in memory. It does not necessarily mean that the model is making incorrect predictions.
 3. **Price scale and currency:** The prices come from the dataset's local currency and can reach the millions. Therefore, a prediction may also be a large number. This can reflect the scale and distribution of the original data rather than an error in the prediction. The project does not perform currency conversion.
-4. **Important Note:** After downloading and extracting the ZIP file, you may find the project folder nested inside another folder with the same name. Open the inner folder containing the Dockerfile and all project files before running the Docker build command.
+4. **Important Note:** When you download the project as a ZIP file, you may find a folder containing another folder (which holds the actual project files). Ensure that you work from the folder containing the project files directly—not from within another enclosing folder—as this could cause issues when building the Docker image.
 
 ## Technologies Used
 
